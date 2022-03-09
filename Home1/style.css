@@ -3,6 +3,16 @@
     src: url(../Asset/Fonts/Iciel.ttf);
 }
 
+@font-face {
+    font-family: Briko;
+    src: url(../Asset/Fonts/Briko.ttf);
+}
+
+@font-face {
+    font-family: SVN-Aleo;
+    src: url(../Asset/Fonts/SVN-Aleo.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -42,8 +52,29 @@
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    font-size: 20;
+    font-size: 1.2vh;
 }
+
+@media screen and (min-width: 801px) {
+    .navbar ul li a {
+      font-size: 20px;
+    }
+    .content h1{
+        font-size: 150px;
+    }
+    .content p{
+        font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .navbar ul li a {
+      font-size: 10px;
+    }
+    .content h1{
+        font-size: 100px;
+    }
+  }
 
 .navbar ul li::after{
     content: "";
@@ -59,4 +90,26 @@
 
 .navbar ul li:hover::after{
     width: 100%;
+}
+
+.content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.content h1{
+    font-family: Briko;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.content p{
+    font-family: SVN-Aleo;
+    margin: 0;
+    padding: 0;
 }
