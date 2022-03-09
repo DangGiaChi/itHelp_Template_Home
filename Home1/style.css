@@ -4,10 +4,46 @@
 }
 
 .banner{
-    width: 100%;
+    width: 100%; 
     height: 100vh;
     background-image: linear-gradient(rgba(10, 0, 0, 0.75), 
     rgba(0, 10, 0, 0.75)), url(../Asset/Images/LivingRoom.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+}
+
+.navbar{
+    width: 80%;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 10vh;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25;
+}
+
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
 }
