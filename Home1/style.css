@@ -28,13 +28,14 @@
     padding: 0;
 }
 
-.banner{
+.home{
     width: 100%; 
     height: 100vh;
     background-image: linear-gradient(rgba(10, 0, 0, 0.75), 
     rgba(0, 10, 0, 0.75)), url(../Asset/Images/LivingRoom.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .navbar{
@@ -77,11 +78,7 @@
     transition: 0.15s;
 }
 
-.navbar ul li:hover::after{
-    width: 100%;
-}
-
-.content{
+.title{
     width: 100%;
     text-align: center;
     position: absolute;
@@ -90,14 +87,14 @@
     color: white;
 }
 
-.content h1{
+.title h1{
     font-family: Briko;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
 }
 
-.content p{
+.title p{
     font-family: Iciel;
     text-transform: uppercase;
     margin: 0;
@@ -120,7 +117,7 @@ button{
     font-family: Iciel;
     text-transform: uppercase;
 }
-
+/* Format span hiệu ứng của button */
 .BtnContainer button span{
     width: 0;
     height: 100%;
@@ -143,31 +140,48 @@ button:hover{
     border: 3px solid rgb(255, 106, 106);
 }
 
+/* Khi media lớn như pc */
 @media screen and (min-width: 801px) {
     .navbar ul li a {
-      font-size: 20px;
+        font-size: 20px;
     }
-    .content h1{
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    .title h1{
         font-size: 150px;
     }
-    .content p{
+    .title p{
         font-size: 20px;
+        margin-bottom: 17px;
     }
     .BtnContainer{
         display: flex;
         justify-content: center;
     }
   }
+/* Chỉnh cỡ chữ navbar cho phù hợp  */
+  @media screen and (max-width: 1080px) {
+    .navbar ul li a {
+        font-size: 15px;
+      }
+  }
+
+  @media screen and (max-width: 1020px) {
+    .navbar ul li a {
+        font-size: 13px;
+      }
+  }
   
   @media screen and (max-width: 800px) {
-    .navbar ul li a {
+    .navbar ul li a, .navbar ul li::after {
+        color: transparent;
+    }
+    .title h1{
+        font-size: 80px;
+    }
+    .title p{
         font-size: 10px;
-    }
-    .content h1{
-        font-size: 100px;
-    }
-    .content p{
-        font-size: 12px;
         margin-bottom: 25px;
     }
     .BtnContainer{
@@ -180,3 +194,8 @@ button:hover{
         height: auto;
     }
   }
+
+/* Format cái div content */
+.content{
+    min-height: 100vh;
+}
