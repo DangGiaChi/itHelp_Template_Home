@@ -91,13 +91,13 @@
     font-family: Briko;
     text-transform: uppercase;
     padding: 0;
-    margin: 0 5vw;
+    margin: 0;
 }
 
 .title p{
     font-family: Iciel;
     text-transform: uppercase;
-    margin: 0 5vw;
+    margin: 0 2.5vw;
     padding: 0;
 }
 
@@ -178,7 +178,7 @@ button:hover{
         color: transparent;
     }
     .title h1{
-        font-size: 80px;
+        font-size: 76px;
     }
     .title p{
         font-size: 10px;
