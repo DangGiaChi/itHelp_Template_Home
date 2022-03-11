@@ -78,7 +78,7 @@
     background-color: transparent;
 
     position: absolute;
-    transition: 0.15s;
+    transition: 0.25s;
 }
 
 /* Title */
@@ -170,7 +170,7 @@
     transition: 0.2s;
 }
 
-button:hover{
+.title div a button:hover{
     border: transparent;
     color: rgb(15, 15, 15);
 }
