@@ -31,10 +31,11 @@
 .home{
     width: 100%; 
     height: 100vh;
-    background-image: linear-gradient(rgba(10, 0, 0, 0.75), 
-    rgba(0, 10, 0, 0.75)), url(../Asset/Images/LivingRoom.jpg);
+    background: linear-gradient(rgba(10, 0, 0, 0.75), 
+    rgba(0, 10, 0, 0.75)), url(../Asset/Images/Furniture.jpg);
     background-size: cover;
     background-position: center;
+    transform: translateZ(0);
 }
 
 /* Navbar */
@@ -83,7 +84,7 @@
 /* Title */
 .title{
     width: 100%;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -104,7 +105,7 @@
     font-family: Briko;
     text-transform: uppercase;
     padding: 0;
-    margin: 0;
+    margin: 0 2.5vw;
 
     animation: Header_Transition 0.6s ease-out;
 }
@@ -192,7 +193,7 @@
         color: rgb(197, 233, 221);
     }
     .title h1{
-        font-size: 150px;
+        font-size: 190px;
     }
     .title p{
         font-size: 20px;
@@ -200,7 +201,7 @@
     }
     .BtnContainer{
         display: flex;
-        justify-content: center;
+        justify-content: left;
     }
   }
 /* Chỉnh cỡ navbar cho phù hợp  */
@@ -208,6 +209,9 @@
     .navbar ul li a {
         font-size: 15px;
       }
+    .title h1{
+        font-size: 150px;
+    }
     .navbar ul li::after{
         height: 4px;
     }
@@ -225,10 +229,11 @@
 /* Khi media nhỏ cỡ mobile */
   @media screen and (max-width: 800px) {
     .navbar ul li a, .navbar ul li::after {
-        color: transparent;
+        display: none;
     }
     .title h1{
-        font-size: 76px;
+        font-size: 100px;
+        margin-bottom: 25px;
     }
     .title p{
         font-size: 10px;

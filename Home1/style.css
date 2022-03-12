@@ -226,7 +226,7 @@
 /* Khi media nhỏ cỡ mobile */
   @media screen and (max-width: 800px) {
     .navbar ul li a, .navbar ul li::after {
-        color: transparent;
+        display: none;
     }
     .title h1{
         font-size: 76px;
