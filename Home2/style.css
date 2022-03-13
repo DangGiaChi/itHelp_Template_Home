@@ -23,6 +23,11 @@
     src: url(../Asset/Fonts/NorthLand.ttf);
 }
 
+@font-face {
+    font-family: Aquus;
+    src: url(../Asset/Fonts/Aquus.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -31,11 +36,33 @@
 .home{
     width: 100%; 
     height: 100vh;
-    background: linear-gradient(rgba(10, 0, 0, 0.75), 
-    rgba(0, 10, 0, 0.75)), url(../Asset/Images/Furniture.jpg);
     background-size: cover;
     background-position: center;
     transform: translateZ(0);
+    overflow: hidden;
+}
+
+.backgroundcover{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(10, 0, 0, 0.75), 
+    rgba(0, 10, 0, 0.75));
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
 }
 
 /* Navbar */
@@ -102,7 +129,7 @@
 }
 
 .title h1{
-    font-family: Briko;
+    font-family: Aquus;
     text-transform: uppercase;
     padding: 0;
     margin: 0 2.5vw;
@@ -193,7 +220,7 @@
         color: rgb(197, 233, 221);
     }
     .title h1{
-        font-size: 190px;
+        font-size: 140px;
     }
     .title p{
         font-size: 20px;
@@ -210,7 +237,7 @@
         font-size: 15px;
       }
     .title h1{
-        font-size: 150px;
+        font-size: 100px;
     }
     .navbar ul li::after{
         height: 4px;
@@ -232,7 +259,7 @@
         display: none;
     }
     .title h1{
-        font-size: 100px;
+        font-size: 60px;
         margin-bottom: 25px;
     }
     .title p{
@@ -253,4 +280,5 @@
 /* Format cái div content */
 .content{
     min-height: 100vh;
+    z-index: 1;
 }

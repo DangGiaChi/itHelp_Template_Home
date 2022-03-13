@@ -1,11 +1,11 @@
-const Hello = document.getElementById("parallax");
 
 // $(window).on('scroll', function() {
 //     window.requestAnimationFrame(scrollHandler);
 //  });
 
 window.addEventListener("scroll", function(){
+    const Parallax = document.querySelector(".parallax");
     let offsetY = this.window.scrollY;
-    Hello.style.backgroundPositionY = (offsetY - Hello.offsetTop) * 0.7 + 'px';
+    Parallax.style.transform = "translateY(" + offsetY * 0.5 + "px)";
 })
 
